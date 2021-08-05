@@ -1,0 +1,80 @@
+.form-main {
+  background-color: @white;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.form-main__title {
+  margin: 0;
+  padding: 75px 20px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  color: @black;
+  background-color: @neutral;
+}
+
+.form-main__description {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form-main__footnote {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.option {
+  padding: 12px 0 42px;
+  border: none;
+  border-top: solid 1px @light-tiffany;
+}
+
+.option__legend {
+  width: 60px;
+  line-height: 16px;
+  color: @tiffany;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.option__item {
+  margin-bottom: 23px;
+}
+
+.option__label {
+  font-weight: 700;
+  color: @black;
+
+  &--type,
+  &--color {
+    margin-left: 60px;
+  }
+}
+
+.option__input {
+  height: 52px;
+  border: none;
+  border-bottom: solid 2px @black;
+  padding: 0;
+  width: 100%;
+
+  &::placeholder {
+    color: @black;
+    opacity: 0.3;
+  }
+}
+
+.option__textarea {
+  height: 142px;
+  resize: none;
+  font: inherit;
+  border: solid 2px @black;
+  padding: 17px;
+  margin: 0;
+
+  &::placeholder {
+    color: @black;
+    opacity: 0.3;
+  }
+}

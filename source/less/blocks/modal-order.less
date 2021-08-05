@@ -1,0 +1,60 @@
+.modal-order {
+  border: 1px solid @shadow-gray;
+  box-shadow: 0 5px 10px @dark-shadow;
+}
+
+.modal-order__title {
+  color: @black;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.modal-order__choice {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.choice-size__title {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.choice-size__list {
+  display: flex;
+}
+
+.choice-size__radio + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  border: 2px solid @border-gray;
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.choice-size__radio:checked + label {
+  border-color: @tiffany;
+}
+
+.modal-order__add-basket {
+  display: inline-block;
+  vertical-align: middle;
+  width: 260px;
+  height: 52px;
+  padding: 18px;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: @tiffany;
+  color: @white;
+
+  cursor: pointer;
+}
