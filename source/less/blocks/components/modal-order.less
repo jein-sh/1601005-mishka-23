@@ -22,6 +22,7 @@
 }
 
 .choice-size__list {
+  .reset-list();
   display: flex;
 }
 
@@ -29,32 +30,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 82px;
   height: 52px;
-  border: 2px solid @border-gray;
   margin-right: 7px;
-  cursor: pointer;
+
+  border: 2px solid @border-gray;
+    cursor: pointer;
 }
 
 .choice-size__radio:checked + label {
   border-color: @tiffany;
 }
 
-.modal-order__add-basket {
-  display: inline-block;
-  vertical-align: middle;
+.modal-order__button {
   width: 260px;
   height: 52px;
   padding: 18px;
 
   font-size: 17px;
   line-height: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  border: none;
-  background-color: @tiffany;
-  color: @white;
-
-  cursor: pointer;
 }

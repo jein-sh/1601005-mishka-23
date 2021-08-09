@@ -1,20 +1,27 @@
-.main__title {
-  font-size: 27px;
-  line-height: 30px;
+.catalog-part {
+  background-color: @shadow;
+}
+
+.catalog-part__title {
   display: flex;
   align-items: center;
 
   width: 260px;
   height: 283px;
-  text-align: center;
   padding: 0 30px;
   margin: 0;
 
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
   color: @black;
+
   background-image: url("../img/hero-mobile.png");
-  background-color: @shadow;
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+.catalog-part__list {
+  .reset-list();
 }
 
 .catalog-part__item {
@@ -31,4 +38,8 @@
   &--toys {
     background-color: @dark-tiffany;
   }
+}
+
+.catalog-part__item a {
+  .reset-link();
 }

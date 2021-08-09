@@ -22,7 +22,7 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__center">
-          <ul class="main-nav__list site-list reset-list">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="reset-link" href="catalog.html" aria-label="Обновить страницу">Каталог товаров</a>
             </li>
@@ -30,7 +30,7 @@
               <a class="reset-link" href="form.html" aria-label="Перейти на страницу">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="main-nav__list user-list reset-list">
+          <ul class="main-nav__list user-list">
             <li class="user-list__item">
               <button class="user-list__search" type="button" aria-label="Ввести значение в поле">
                 <svg class="user-list__search-icon" aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
               </button>
             </li>
             <li class="user-list__item">
-              <a class="user-list__basket reset-link" href="blank.html">
+              <a class="user-list__basket" href="blank.html">
                 <svg class="user-list__basket-icon" aria-hidden="true" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.2" d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z" fill="black"/>
                   </svg>
@@ -52,10 +52,10 @@
     </header>
     <main class="catalog">
       <h1 class="catalog__title">Каталог товаров</h1>
-      <ul class="catalog__list reset-list">
+      <ul class="catalog__list">
         <li class="catalog__item">
           <article class="product-cart">
-            <h2 class="product-cart__title"><a class="reset-link" href="blank.html">Зайчик-попрыгайчик</a></h2>
+            <h2 class="product-cart__title"><a href="blank.html">Зайчик-попрыгайчик</a></h2>
             <div class="produc-cart__image"><a href="blank.html">
               <img src="img/rabbit-mobile.jpg" width="260" height="195" alt="Вязаная игрушка зайчик"></a>
             </div>
@@ -72,8 +72,8 @@
         </li>
         <li class="catalog__item">
           <article class="product-cart">
-            <h2 class="product-cart__title"><a class="reset-link" href="blank.html">Корзинка для белья</a></h2>
-            <div class="product-cart__image"><a class="reset-link" href="blank.html">
+            <h2 class="product-cart__title"><a href="blank.html">Корзинка для белья</a></h2>
+            <div class="product-cart__image"><a href="blank.html">
               <img src="img/small-cart-mobile.jpg" width="260" height="195" alt="Вязаная корзинка для белья"></a>
             </div>
             <p class="product-cart__features">Диаметр 15 см, высота 10 см</p>
@@ -89,8 +89,8 @@
         </li>
         <li class="catalog__item">
           <article class="product-cart">
-            <h2 class="product-cart__title"><a class="reset-link" href="blank.html">Большая корзинка для игрушек</a></h2>
-            <div class="product-cart__image"><a class="reset-link" href="blank.html">
+            <h2 class="product-cart__title"><a href="blank.html">Большая корзинка для игрушек</a></h2>
+            <div class="product-cart__image"><a href="blank.html">
               <img src="img/big-cart-for-toys-mobile.jpg" width="260" height="195" alt="Вязаная большая корзина для игрушек"></a>
             </div>
             <p class="product-cart__features">Диаметр 30 см, высота 30 см</p>
@@ -109,16 +109,16 @@
         <h2 class="production__title">Процесс производства</h2>
         <div class="production__movie">
           <img src="img/video-mobile.jpg" width="260" height="150" alt="Заставка для видео о процессе производства">
-          <button class="production__play-button" type="button" aria-label="Показать видео о процессе производства"><img src="img/play.svg" width="101" height="77" alt="Кнопка воспроизведения видео"></button>
+          <button class="production__play-movie" type="button" aria-label="Показать видео о процессе производства"><span class="visually-hidden">Воспроизвести</span></button>
         </div>
         <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__make-order button button-link reset-link" href="form.html" aria-label="Перейти на страницу формы заказа">Сделать заказ</a>
+        <a class="production__button button button-link" href="form.html" aria-label="Перейти на страницу формы заказа">Сделать заказ</a>
       </article>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__social social">
-          <ul class="social__list reset-list">
+          <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--instagram" href="#" aria-label="Перейти на нашу страницу в">
                 <svg aria-hidden="true" focusable="false" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +155,7 @@
       <form class="modal-order__form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="modal-order__choice choice-size">
           <legend>Выберите размер:</legend>
-            <ul class="choice-size__list reset-list">
+            <ul class="choice-size__list">
             <li class="choice-size__item checked">
               <input class="choice-size__radio visually-hidden" type="radio" name="size" value="size-S" id="size-S" aria-label="Выбрать размер S" checked>
               <label for="size-S">S</label>
@@ -170,7 +170,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="modal-order__add-basket" type="submit" aria-label="Добавить товар в корзину">Добавить</button>
+        <button class="modal-order__button button button--tiffany" type="submit" aria-label="Добавить товар в корзину">Добавить</button>
     </form>
     </div>
   </body>
