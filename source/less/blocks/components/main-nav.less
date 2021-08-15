@@ -1,12 +1,34 @@
+.page-header__logo {
+  border-bottom: 1px solid @shadow;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 20px;
+  height: 14px;
+  border: none;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/menu.svg");
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
 .main-nav__list li {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  border-top: 1px solid @shadow;
 }
 
 .main-nav a{
   .reset-link();
 }
+
 .site-list {
   .reset-list();
 }
@@ -19,4 +41,9 @@
   background-color: @white;
   border: none;
   font-weight: 700;
+}
+
+.main-nav__delivery {
+  font-size: 15px;
+  line-height: 24px;
 }

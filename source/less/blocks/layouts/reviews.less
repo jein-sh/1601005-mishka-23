@@ -1,0 +1,49 @@
+.reviews__wrapper {
+  display: grid;
+  grid-template-areas:
+   "title"
+   "review"
+   "button";
+
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 175px;
+    grid-template-areas:
+     "title button"
+     "review review";
+
+    padding: 82px 50px 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 78px 50px 96px 225px;
+  }
+}
+
+.reviews__list {
+  grid-area: review;
+}
+
+.reviews__item {
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__author {
+  margin: 30px 0;
+}
+
+.reviews__button{
+  grid-area: button;
+
+  margin: 45px 0 35px;
+  padding: 16px;
+  width: 224px;
+  height: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 143px;
+    margin: 0;
+  }
+}

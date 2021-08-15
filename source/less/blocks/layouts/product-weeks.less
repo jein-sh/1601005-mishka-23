@@ -1,0 +1,148 @@
+.product {
+  display: grid;
+  grid-template-areas: "title"
+  "weeks"
+  "text"
+  "table"
+  "image"
+  "price"
+  "button";
+  justify-content: center;
+
+  padding: 30px 30px 30px 36px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 220px 120px;
+    grid-template-areas: "title title weeks"
+    "text image image"
+    "table image image"
+    "price image image"
+    "button image image" ;
+
+    padding: 40px 50px 52px 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 100px 1fr 525px;
+    grid-template-areas: "weeks title image"
+    "... text image"
+    "... table image"
+    "... price image"
+    "... button image" ;
+
+    padding: 54px 50px 73px 125px;
+  }
+}
+
+.product__title {
+  grid-area: title;
+  z-index: 3;
+
+  margin-right: 5px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 61px 0 0;
+  }
+}
+
+.product__weeks {
+  grid-area: weeks;
+
+  margin: 0;
+  margin-bottom: 17px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 70px 0 0 -20px;
+  }
+}
+
+.product__description {
+  grid-area: text;
+
+  margin-bottom: 15px;
+
+  @media (min-width:@tablet-width) {
+    margin: -10px 0 48px 0;
+  }
+}
+
+.product__features-list {
+  grid-area: table;
+
+  margin: 28px 0;
+
+  @media (min-width:@tablet-width) {
+    margin: 0px 0 57px 0;
+   }
+
+}
+
+.product__features-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 292px;
+  height: 39px;
+  border-bottom: solid 1px @shadow;
+}
+
+.product__feature {
+  width: 97px;
+}
+
+.product__value {
+  margin: 0;
+}
+.product__image {
+  grid-area: image;
+
+  width: 260px;
+  height: 315px;
+
+  background-color: @light;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 404px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 525px;
+    height: 636px;
+  }
+}
+
+.product__price {
+  grid-area: price;
+
+  font-weight: 700;
+  margin: 25px 0;
+
+  @media (min-width:@tablet-width) {
+    margin: 0 0 33px 0;
+  }
+}
+
+.product__button {
+  grid-area: button;
+
+  padding: 16px;
+  width: 260px;
+  height: 52px;
+
+  @media (min-width: @tablet-width) {
+    width: 292px;
+    margin-right: 42px;
+  }
+}

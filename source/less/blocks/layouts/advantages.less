@@ -1,0 +1,41 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+}
+
+.advantages__list-title {
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template: row;
+  justify-content: start;
+
+  margin-bottom: 58px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+}
+
+.advantages__item {
+  margin-top: 80px;
+}
+
+.advantages__item p {
+  margin: 0;
+}
+
+

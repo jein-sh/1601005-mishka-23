@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalog-part {
+  width: 100%;
+}
+
+.catalog-part__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 283px;
+  padding: 0 30px;
+  margin: 0;
+}
+
+.catalog-part__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+}
+
+.catalog-part__item {
+  flex-grow: 1;
+
+  padding: 30px;
+  padding-right: 150px;
+
+}
