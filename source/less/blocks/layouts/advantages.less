@@ -1,13 +1,17 @@
 .advantages {
+  width: 100%;
+}
+
+.advantages__content {
+  .padding-mobile();
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  padding: 0 30px;
-
   @media (min-width: @tablet-width) {
-    padding: 0 50px;
+    .padding-tablet();
   }
 }
 
@@ -20,7 +24,6 @@
 .advantages__list {
   display: grid;
   grid-template: row;
-  justify-content: start;
 
   margin-bottom: 58px;
 
@@ -37,5 +40,3 @@
 .advantages__item p {
   margin: 0;
 }
-
-

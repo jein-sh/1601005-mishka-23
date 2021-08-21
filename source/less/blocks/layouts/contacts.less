@@ -1,52 +1,60 @@
-.contacts__wrapper {
+.contacts {
+  width: 100%;
+}
+
+.contacts__content {
   display: grid;
-  grid-template-rows: min-content min-content min-content min-content ;
+  grid-template: row;
+
   justify-content: center;
   align-items: center;
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content 1fr 60px;
-    padding: 70px 50px 105px 225px;
+    .padding-tablet();
+
+    grid-template-columns: 1fr 527px;
+    grid-template-rows: min-content 1fr min-content;
+
+    padding-top: 70px;
+    padding-bottom: 105px;
   }
 }
 
 .contacts__title {
-  align-self: start;
+  .padding-mobile();
 
-  margin: 30px;
-  padding: 0;
+  align-self: start;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
-    margin: 68px 50px 50px;
+    .padding-tablet();
   }
 
   @media (min-width: @desktop-width) {
-    padding: 80px 10px 35px 0;
-    margin: 0;
+    padding: 80px 10px 35px 175px;
   }
 }
 
 .contacts__list {
-  .reset-list();
-  padding: 0 30px;
-  padding-bottom: 22px;
+  .padding-mobile();
 
   @media (min-width: @tablet-width) {
+    .padding-tablet();
+
     display: flex;
-    padding: 0 50px;
-    padding-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
-    padding: 0;
+
+    padding: 0 10px 10px 175px;
   }
 }
 
 .contacts__item {
   display: flex;
+  flex-grow: 1;
 
   margin-bottom: 30px;
 }
@@ -62,14 +70,10 @@
 .contacts__item a {
   margin: 0;
   padding-bottom: 5px;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 50px;
-  }
 }
 
 .contacts__map {
-  justify-self: center;
+  justify-self: start;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
@@ -80,18 +84,21 @@
 }
 
 .contacts__button {
-  justify-self: center;
-  margin: 40px 0;
+
   padding: 16px;
-  width: 224px;
-  height: 20px;
+  margin: 40px 30px;
 
   @media (min-width: @tablet-width) {
+    justify-self: center;
+
     margin: 55px 0 57px;
-    width: 194px;
+    width: 230px;
   }
+
   @media (min-width: @desktop-width) {
     justify-self: start;
+
     margin: 0;
+    margin-left: 175px;
   }
 }

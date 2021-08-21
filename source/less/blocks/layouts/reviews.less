@@ -1,23 +1,29 @@
-.reviews__wrapper {
-  display: grid;
-  grid-template-areas:
-   "title"
-   "review"
-   "button";
+.reviews{
+  width: 100%;
+}
 
-  padding: 0 30px;
+.reviews__content {
+  .padding-mobile();
+
+  display: grid;
+  grid-template-areas: "title"
+    "review"
+    "button";
+
+  padding-bottom: 45px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 1fr 175px;
-    grid-template-areas:
-     "title button"
-     "review review";
+    .padding-tablet();
 
-    padding: 82px 50px 47px;
+    grid-template-columns: 1fr 175px;
+    grid-template-areas: "title button"
+      "review review";
+
+    margin-bottom: 85px;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 78px 50px 96px 225px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
   }
 }
 
@@ -34,16 +40,17 @@
   margin: 30px 0;
 }
 
+.reviews__author-nik {
+  display: block;
+}
+
 .reviews__button{
   grid-area: button;
 
   margin: 45px 0 35px;
   padding: 16px;
-  width: 224px;
-  height: 20px;
 
   @media (min-width: @tablet-width) {
-    width: 143px;
-    margin: 0;
+    margin: 15px 0;
   }
 }

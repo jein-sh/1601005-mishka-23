@@ -2,32 +2,50 @@
   background-color: @white;
   font-size: 17px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
 }
 
 .form-main__title {
-  margin: 0;
-  padding: 75px 20px;
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
   color: @black;
   background-color: @neutral;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .form-main__description {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
-.form-main__footnote {
+.form-footer__footnote {
   font-size: 14px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
-.form-main__button {
-  padding: 16px;
-  width: 260px;
-  height: 52px;
+.form-footer__button {
   font-size: 17px;
   line-height: 16px;
 }

@@ -1,10 +1,12 @@
 .modal-order {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   padding: 30px;
   width: 258px;
+
   text-align: center;
   border: 1px solid @shadow-gray;
   box-shadow: 0 5px 10px @dark-shadow;
@@ -32,6 +34,7 @@
 
 .choice-size__list {
   .reset-list();
+
   display: flex;
   margin: 21px 0 31px;
 }
@@ -46,7 +49,7 @@
   margin-right: 7px;
 
   border: 2px solid @border-gray;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .choice-size__radio:checked + label {
