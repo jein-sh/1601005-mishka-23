@@ -6,7 +6,6 @@
   display: grid;
   grid-template: row;
 
-  justify-content: center;
   align-items: center;
 
   @media (min-width: @desktop-width) {
@@ -17,6 +16,8 @@
 
     padding-top: 70px;
     padding-bottom: 105px;
+
+    .wrapper-desktop();
   }
 }
 
@@ -73,8 +74,6 @@
 }
 
 .contacts__map {
-  justify-self: start;
-
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-column-end: -1;

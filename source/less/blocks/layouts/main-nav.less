@@ -10,6 +10,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  @media (min-width: @desktop-width) {
+
+    .wrapper-desktop();
+  }
 }
 
 .main-nav__logo {
@@ -25,7 +30,6 @@
   @media (min-width: @desktop-width) {
     justify-content: center;
     flex: 0 0 20%;
-
   }
 }
 
@@ -133,7 +137,7 @@
     border-left: solid 1px @shadow;
   }
 
-  &--search{
+  &--search {
     @media (min-width: @tablet-width) {
       justify-content: center;
 
@@ -151,7 +155,7 @@
   }
 }
 
-.fill-basket  {
+.fill-basket {
   display: none;
 
   @media (min-width: @tablet-width) {

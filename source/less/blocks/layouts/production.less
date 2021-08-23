@@ -2,23 +2,23 @@
   display: grid;
   grid-template-rows: min-content min-content min-content min-content;
   grid-template-areas: "title"
-  "movie"
-  "text"
-  "button";
+    "movie"
+    "text"
+    "button";
 
   @media (min-width: @tablet-width) {
     grid-template-areas:
-    "movie"
-    "title"
-    "text"
-    "button";
+      "movie"
+      "title"
+      "text"
+      "button";
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "movie title"
-    "movie text"
-    "movie button";
+      "movie text"
+      "movie button";
   }
 }
 
@@ -58,7 +58,6 @@
     margin-bottom: 78px;
     margin-right: 88px;
   }
-
 }
 
 .production__description {
@@ -70,6 +69,7 @@
   @media (min-width: @tablet-width) {
     padding: 0 17px 0 40px;
   }
+
   @media (min-width: @desktop-width) {
     padding: 0;
     padding-right: 35px;

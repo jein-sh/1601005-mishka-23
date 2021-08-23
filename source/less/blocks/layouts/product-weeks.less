@@ -7,13 +7,13 @@
 
   display: grid;
   grid-template-areas: "title"
-  "weeks"
-  "text"
-  "table"
-  "image"
-  "price"
-  "button";
-  justify-content: center;
+    "weeks"
+    "text"
+    "table"
+    "image"
+    "price"
+    "button";
+
 
   padding-top: 31px;
   padding-bottom: 35px;
@@ -23,10 +23,10 @@
 
     grid-template-columns: 1fr 220px 120px;
     grid-template-areas: "title title weeks"
-    "text image image"
-    "table image image"
-    "price image image"
-    "button image image";
+      "text image image"
+      "table image image"
+      "price image image"
+      "button image image";
 
     padding-top: 40px;
     padding-bottom: 52px;
@@ -35,10 +35,10 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: 100px 350px 550px;
     grid-template-areas: "weeks title image"
-    "... text image"
-    "... table image"
-    "... price image"
-    "... button image";
+      "... text image"
+      "... table image"
+      "... price image"
+      "... button image";
 
     padding-top: 54px;
     padding-bottom: 73px;
@@ -94,10 +94,9 @@
 
   margin: 28px 0;
 
-  @media (min-width:@tablet-width) {
-    margin: 0px 0 57px 0;
+  @media (min-width: @tablet-width) {
+    margin: 0 0 57px 0;
   }
-
 }
 
 .product__features-item {
@@ -115,6 +114,7 @@
 .product__value {
   margin: 0;
 }
+
 .product__image {
   grid-area: image;
 
@@ -127,6 +127,7 @@
     width: 334px;
     height: 404px;
   }
+
   @media (min-width: @desktop-width) {
     width: 525px;
     height: 636px;
@@ -140,7 +141,7 @@
   font-weight: 700;
   margin: 25px 0;
 
-  @media (min-width:@tablet-width) {
+  @media (min-width: @tablet-width) {
     margin: 0 0 33px 0;
   }
 }

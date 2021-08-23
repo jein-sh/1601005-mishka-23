@@ -1,9 +1,8 @@
-.main{
+.main {
   width: 100%;
 }
 
 .main__content {
-
   @media (min-width: @tablet-width) {
     .padding-tablet();
   }
@@ -30,6 +29,11 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+
+    .wrapper-desktop();
   }
 }
 

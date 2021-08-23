@@ -9,13 +9,19 @@
   }
 
   &--phone,
-  &--mail,
-  &--wish {
+  &--mail {
     @media (min-width: @tablet-width) {
       margin-right: 50px;
     }
+
     @media (min-width: @desktop-width) {
       margin-right: 175px;
+    }
+  }
+
+  &--wish {
+    @media (min-width: @desktop-width) {
+      margin-right: 125px;
     }
   }
 }
@@ -38,10 +44,10 @@
   flex-direction: column;
 
   &--color {
-
     @media (min-width: @tablet-width) {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 }
@@ -62,14 +68,12 @@
   }
 
   &--color {
-
     @media (min-width: @tablet-width) {
-      width: 200px;
+      width: 186px;
     }
   }
 
   &--name {
-
     @media (min-width: @tablet-width) {
       flex-direction: row;
       align-items: center;
@@ -82,7 +86,6 @@
 }
 
 .option__label {
-
   @media (min-width: @tablet-width) {
     margin-right: 25px;
   }
@@ -99,7 +102,9 @@
 }
 
 .option__textarea {
+  box-sizing: border-box;
   height: 142px;
   width: 100%;
   padding: 18px;
+  margin: 0;
 }
