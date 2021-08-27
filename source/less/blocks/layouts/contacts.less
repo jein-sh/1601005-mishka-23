@@ -3,6 +3,7 @@
 }
 
 .contacts__content {
+  position: relative;
   display: grid;
   grid-template: row;
 
@@ -33,6 +34,26 @@
 
   @media (min-width: @desktop-width) {
     padding: 80px 10px 35px 175px;
+  }
+}
+
+.contacts__flag {
+  display: none;
+
+  width: 47px;
+  height: 81px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    top: -22px;
+    right: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 132px;
+    left: 113px;
   }
 }
 

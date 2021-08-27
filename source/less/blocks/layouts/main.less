@@ -8,7 +8,7 @@
   }
 }
 
-.catalog-part__title {
+.main__title {
   .padding-mobile();
 
   min-height: 210px;
@@ -23,21 +23,29 @@
   }
 }
 
-.catalog-part__list {
+.main__catalog {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
 
     .wrapper-desktop();
   }
+
+  .zigzag-fill();
 }
 
-.catalog-part__item {
+.main__catalog-part {
   flex-grow: 1;
   padding: 35px 150px 35px 25px;
+
+  &:hover {
+    padding-bottom: 40px;
+  }
 }

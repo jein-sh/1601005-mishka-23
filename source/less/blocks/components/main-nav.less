@@ -1,18 +1,90 @@
 .main-nav__toggle {
   position: absolute;
-  top: 30px;
+  top: -47px;
   right: 30px;
+  display: block;
+
+  cursor: pointer;
+  border: none;
 
   width: 20px;
   height: 14px;
-
-  border: none;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-image: url("../img/menu.svg");
+  background-color: inherit;
 
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--closed .user-list__item {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: @dark;
+  box-shadow: 0 6px 0 0 @dark, 0 12px 0 0 @dark;
+}
+
+.main-nav--opened .main-nav__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 10;
+
+  background-color: @white;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__content {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: flex;
+}
+
+.main-nav--nojs .user-list__item {
+  display: flex;
+}
+
+
+.main-nav--opened .main-nav__toggle {
+  height: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    width: 28px;
+    height: 2px;
+    background-color: @dark;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
@@ -20,30 +92,45 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+
+  border-top: solid 1px @shadow;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
 }
 
 .main-nav a {
   .reset-link();
+  .hover-title();
 }
 
 .site-list {
   .reset-list();
 }
 
-.special-list {
+.main-nav__special-list {
   .reset-list();
 
   font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
 .user-list {
   .reset-list();
 }
 
+.user-list__basket {
+  .hover-icon-svg();
+}
+
 .user-list__search {
   background-color: @white;
   border: none;
   font-weight: 700;
+
+  .hover-icon-svg();
 }
 
 .main-nav__delivery {
