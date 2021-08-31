@@ -3,11 +3,19 @@
 }
 
 .contacts__content {
+  .zigzag-line();
+
   position: relative;
   display: grid;
   grid-template: row;
 
   align-items: center;
+  margin-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 80px;
+  }
+
 
   @media (min-width: @desktop-width) {
     .padding-tablet();
@@ -30,6 +38,7 @@
 
   @media (min-width: @tablet-width) {
     .padding-tablet();
+    padding-bottom: 49px;
   }
 
   @media (min-width: @desktop-width) {
@@ -46,7 +55,7 @@
   @media (min-width: @tablet-width) {
     display: block;
     position: absolute;
-    top: -22px;
+    top: 47px;
     right: 47px;
   }
 

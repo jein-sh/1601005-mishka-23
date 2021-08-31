@@ -24,6 +24,7 @@
 }
 
 .main__catalog {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,6 +37,7 @@
   @media (min-width: @desktop-width) {
 
     .wrapper-desktop();
+    max-width: 1150px;
   }
 
   .zigzag-fill();
@@ -46,6 +48,7 @@
   padding: 35px 150px 35px 25px;
 
   &:hover {
+    margin-top: -5px;
     padding-bottom: 40px;
   }
 }
