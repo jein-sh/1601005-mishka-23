@@ -28,3 +28,42 @@
     line-height: 22px;
   }
 }
+
+.advantages__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -50px;
+    left: 0;
+    width: 55px;
+    height: 38px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &--material::before {
+    background-image: url("../img/material.svg");
+  }
+
+  &--cash::before {
+    background-image: url("../img/cash.svg");
+  }
+
+  &--like::before {
+    background-image: url("../img/like.svg");
+  }
+
+  &--handmade::before {
+    background-image: url("../img/handmade.svg");
+  }
+
+  &--domestic::before {
+    background-image: url("../img/domestic.svg");
+  }
+
+  &--wrapping::before {
+    background-image: url("../img/wrapping.svg");
+  }
+}

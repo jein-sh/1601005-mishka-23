@@ -1,12 +1,33 @@
 .page-header__content {
-  .padding-mobile();
+
+  position: relative;
 
   min-height: 79px;
   border-bottom: solid 1px @shadow;
+
 
   @media (min-width: @tablet-width) {
     .padding-tablet();
 
     min-height: 89px;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 79px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    min-height: 89px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

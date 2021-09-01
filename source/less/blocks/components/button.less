@@ -11,12 +11,26 @@
   background-color: @white;
 
   cursor: pointer;
+
+  &:hover {
+    color: @white;
+    background-color: @dark-gray;
+  }
+
+  &:active {
+    color: @white-opacity;
+  }
 }
 
 .button--tiffany {
   background-color: @tiffany;
   color: @white;
   border: none;
+
+  &:hover,
+  &:active {
+    background-color: @dark-tiffany;
+  }
 }
 
 .button-form {

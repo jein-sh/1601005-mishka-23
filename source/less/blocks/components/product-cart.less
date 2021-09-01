@@ -1,5 +1,13 @@
 .product-cart {
   border: 1px solid @neutral;
+
+  &:hover {
+    box-shadow: 0 6px 10px @border-black;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px @border-black;
+  }
 }
 
 .product-cart a {
@@ -11,6 +19,10 @@
   font-size: 17px;
   line-height: 24px;
   color: @black;
+}
+
+.product-cart__title a {
+  .hover-title();
 }
 
 .product-cart__features {
@@ -28,4 +40,14 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+
+  .hover-icon-svg();
+}
+
+.product-cart__image a {
+  display: block;
+}
+
+.product-cart__image img {
+  display: block;
 }

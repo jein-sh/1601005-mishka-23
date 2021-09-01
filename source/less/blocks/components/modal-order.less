@@ -1,13 +1,18 @@
 .modal-order {
+  position: absolute;
+  top: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   padding: 30px;
-  width: 258px;
 
   text-align: center;
+  background-color: @white;
   border: 1px solid @shadow-gray;
   box-shadow: 0 5px 10px @dark-shadow;
 }
@@ -50,6 +55,10 @@
 
   border: 2px solid @border-gray;
   cursor: pointer;
+}
+
+.choice-size__radio:hover + label {
+  border-color: @border-dark-gray;
 }
 
 .choice-size__radio:checked + label {
