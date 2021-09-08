@@ -43,13 +43,14 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 0;
-    width: 175px;
-    min-height: 89px;
+    width: 170px;
+    min-height: 69px;
   }
 
   @media (min-width: @desktop-width) {
     width: 184px;
     padding-left: 35px;
+    margin-top: 12px;
 
     &:first-child {
       padding: 0;
@@ -64,7 +65,7 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 90px;
+    top: 77px;
     left: 0;
 
     display: flex;
@@ -129,9 +130,9 @@
   top: 25px;
   left: 55px;
 
-
   @media (min-width: @tablet-width) {
     position: static;
+    margin-top: 4px;
   }
 }
 
@@ -144,11 +145,15 @@
 
 .user-list__basket {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
 }
 
 .user-list__basket-icon {
   position: absolute;
-  top: 0;
+  top: 3px;
   left: -50px;
 }
 
@@ -167,7 +172,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 90px;
+    top: 77px;
     right: 0;
 
     display: flex;

@@ -19,6 +19,10 @@
   font-size: 17px;
   line-height: 24px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .product-cart__title a {
@@ -28,12 +32,20 @@
 .product-cart__features {
   font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .product-cart__price {
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .product-cart__open-modal {
@@ -41,13 +53,16 @@
   background-color: inherit;
   cursor: pointer;
 
-  .hover-icon-svg();
+  fill: @black;
+  opacity: 0.2;
+
+  .hover-header-svg();
 }
 
 .product-cart__image a {
   display: block;
 }
 
-.product-cart__image img {
+.product-cart__img {
   display: block;
 }

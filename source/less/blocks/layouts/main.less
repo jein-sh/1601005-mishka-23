@@ -18,8 +18,13 @@
   @media (min-width: @tablet-width) {
     .padding-tablet();
 
-    min-height: 469px;
-    padding-top: 158px;
+    min-height: 468px;
+    padding-top: 154px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 465px;
+    padding-top: 157px;
   }
 }
 
@@ -29,23 +34,28 @@
   flex-direction: column;
   justify-content: center;
 
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     align-items: center;
+    min-height: 125px;
   }
 
   @media (min-width: @desktop-width) {
-
     .wrapper-desktop();
-    max-width: 1150px;
   }
 
   .zigzag-fill();
 }
 
 .main__catalog-part {
-  flex-grow: 1;
-  padding: 35px 150px 35px 25px;
+  padding: 24px 150px 31px 30px;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    padding: 25px 150px 30px 37px;
+  }
+
 
   &:hover {
     margin-top: -5px;

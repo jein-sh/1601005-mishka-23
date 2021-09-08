@@ -15,7 +15,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: min-content 1fr min-content;
     grid-template-areas: "movie title"
       "movie text"
       "movie button";
@@ -37,35 +37,16 @@
   padding: 21px 12px 26px 90px;
 
   @media (min-width: @tablet-width) {
-    padding: 41px 12px 24px 107px;
+    padding: 41px 12px 25px 107px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 96px 110px 27px 0;
+    padding: 96px 110px 0 0;
   }
 }
 
 .production__movie {
   grid-area: movie;
-}
-
-.production__button {
-  grid-area: button;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 52px;
-  margin: 41px 34px 33px;
-
-  @media (min-width: @tablet-width) {
-    margin: 40px 42px 46px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 78px;
-    margin-right: 88px;
-  }
 }
 
 .production__description {
@@ -81,5 +62,24 @@
   @media (min-width: @desktop-width) {
     padding: 0;
     padding-right: 35px;
+  }
+}
+
+.production__button {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 48px;
+  margin: 41px 34px 33px;
+
+  @media (min-width: @tablet-width) {
+    margin: 42px 42px 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 230px;
+    margin: 26px 0 35px 0;
   }
 }
