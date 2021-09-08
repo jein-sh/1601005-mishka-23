@@ -1,29 +1,75 @@
 .option {
   position: relative;
   margin: 0 30px;
-  padding: 30px 0;
+  padding: 30px 0 20px;
+
+  &--color {
+    padding: 25px 0  10px;
+  }
+
+  &--name {
+    padding: 29px 0 12px;
+  }
+
+  &--phone,
+  &--mail {
+    padding: 5px 0 35px;
+  }
+
+  &--wish {
+    padding: 22px 0 0;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
 
     margin: 0 50px;
-    padding: 50px 0 50px 175px;
-
-    &--phone {
-      padding-bottom: 24px;
-    }
+    padding: 50px 0 25px 167px;
 
     &--mail {
       padding-top: 0;
+      padding-bottom: 50px;
+    }
+
+    &--phone {
+      padding-bottom: 20px;
+    }
+
+    &--wish {
+      padding-bottom: 50px;
     }
   }
 
   @media (min-width: @desktop-width) {
     .wrapper-desktop();
 
-    padding: 50px 175px 50px 175px;
-    max-width: 800px;
+    padding: 50px 175px 26px;
+    max-width: 700px;
+
+    &--color {
+      padding-right: 75px;
+      max-width: 800px;
+    }
+
+    &--name {
+      padding-top: 47px;
+      padding-bottom: 30px;
+    }
+
+    &--phone {
+      padding-top: 47px;
+      padding-bottom: 20px;
+    }
+
+    &--mail {
+      padding-top: 0;
+      padding-bottom: 49px;
+    }
+
+    &--wish {
+      padding-bottom: 48px;
+    }
   }
 }
 
@@ -33,10 +79,15 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     left: 0;
+    top: 68px;
+
+    &--mail {
+      top: 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    left: 47px;
+    left: 60px;
   }
 }
 
@@ -52,7 +103,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 262px 262px 1fr;
     }
   }
 }
@@ -76,12 +127,12 @@
 
   &--color {
     justify-content: center;
-    min-height: 38px;
+    min-height: 37px;
     margin-bottom: 24px;
 
     @media (min-width: @tablet-width) {
       min-height: 52px;
-      width: 248px;
+      width: 262px;
     }
   }
 
@@ -89,6 +140,7 @@
     @media (min-width: @tablet-width) {
       flex-direction: row;
       align-items: center;
+      margin-bottom: 20px;
     }
   }
 }
@@ -103,19 +155,25 @@
     padding-left: 60px;
 
     @media (min-width: @tablet-width) {
-      padding-left: 78px;
+      padding-left: 80px;
     }
   }
 }
 
 .option__input {
   box-sizing: border-box;
-  min-height: 52px;
+  min-height: 51px;
   padding: 0;
   width: 100%;
 
   @media (min-width: @tablet-width) {
-    padding: 18px;
+    padding: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &--name {
+      min-height: 50px;
+    }
   }
 }
 
@@ -123,6 +181,6 @@
   box-sizing: border-box;
   height: 142px;
   width: 100%;
-  padding: 18px;
+  padding: 16px 18px;
   margin: 0;
 }

@@ -29,8 +29,8 @@
     @media (min-width: @tablet-width) {
       position: absolute;
       content: "";
-      bottom: -12px;
-      left: 0;
+      bottom: -10px;
+      left: -10px;
       width: 100%;
       height: 24px;
       background-image: url("../img/zigzag-fill-tablet.svg");
@@ -74,23 +74,23 @@
   }
 }
 
-.hover-svg() {
-  &:hover path {
+.hover-footer-svg() {
+  &:hover {
     fill: @dark-mint;
   }
 
-  &:focus path {
+  &:focus {
     fill: @dark-mint-opacity;
   }
 }
 
-.hover-icon-svg() {
-  &:hover path {
+.hover-header-svg() {
+  &:hover {
     fill: @tiffany;
     opacity: 1;
   }
 
-  &:focus path {
+  &:focus {
     fill: @tiffany-opacity;
   }
 }

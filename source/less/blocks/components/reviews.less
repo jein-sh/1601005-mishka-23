@@ -3,19 +3,30 @@
   font-size: 15px;
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/review2.png");
+    font-size: 17px;
+    background-image: url("../img/review-tablet.png");
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-size: contain;
   }
 
   @media (min-width: @desktop-width) {
     background-position: 50px 0;
+    background-image: url("../img/review-desktop.png");
+  }
+
+  @media (min-resolution: 2dppx) {
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/review-tablet@2x.png");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/review-desktop@2x.png");
+    }
   }
 }
 
 .reviews__title {
-  margin: 15px 0;
-  padding: 0;
   font-size: 25px;
   font-weight: 700;
   color: @black;
@@ -36,6 +47,23 @@
   color: @black;
   font-size: 17px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
+}
+
+.reviews__author-nik {
+  font-style: normal;
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+  }
 }
 
 .reviews__button {
@@ -59,7 +87,7 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    bottom: 37px;
+    bottom: 0;
     right: 0;
     width: 172px;
     border: none;
@@ -89,39 +117,40 @@
 
 .arrow {
   position: relative;
-  width: 50px;
-  height: 3px;
+  width: 48px;
+  height: 4px;
+  margin-left: -5px;
   background-color: @black;
 
   &::after {
     content: " ";
     position: absolute;
-    width: 13px;
-    height: 3px;
-    top: -3px;
-    right: -3px;
+    width: 18px;
+    height: 4px;
+    top: -5px;
+    right: -4px;
     background-color: @black;
     transform: rotate(45deg);
   }
 
   &--prev::after {
-    left: -3px;
+    left: -4px;
     transform: rotate(-45deg);
   }
 
   &::before {
     content: " ";
     position: absolute;
-    width: 13px;
-    height: 3px;
-    top: 3px;
-    right: -3px;
+    width: 18px;
+    height: 4px;
+    top: 5px;
+    right: -4px;
     background-color: @black;
     transform: rotate(-45deg);
   }
 
   &--prev::before {
-    left: -3px;
+    left: -4px;
     transform: rotate(45deg);
   }
 }

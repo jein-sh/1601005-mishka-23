@@ -43,8 +43,6 @@
   right: 0;
 
   z-index: 10;
-
-  background-color: @white;
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -92,11 +90,18 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  background-color: @white;
 
   border-top: solid 1px @shadow;
 
   @media (min-width: @tablet-width) {
+    font-size: 15px;
     border-top: none;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
   }
 }
 
@@ -122,15 +127,28 @@
 }
 
 .user-list__basket {
-  .hover-icon-svg();
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+}
+
+.user-list__basket-icon {
+  fill: @black;
+  opacity: 0.2;
+
+  .hover-header-svg();
 }
 
 .user-list__search {
-  background-color: @white;
   border: none;
+  background-color: @white;
   font-weight: 700;
+  cursor: pointer;
 
-  .hover-icon-svg();
+  fill: @black;
+  opacity: 0.2;
+
+  .hover-header-svg();
 }
 
 .main-nav__delivery {

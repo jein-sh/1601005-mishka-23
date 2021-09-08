@@ -10,20 +10,32 @@
   text-align: center;
   color: @black;
 
-  background-image: url("../img/hero-mobile.png");
+  background-image: url("../img/mishka-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
-    background-image: url("../img/hero-tablet.png");
+    background-image: url("../img/mishka-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
-    background-image: url("../img/hero-desktop.png");
+    background-image: url("../img/mishka-desktop.jpg");
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/mishka-mobile@2x.jpg");
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/mishka-tablet@2x.jpg");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/mishka-desktop@2x.jpg");
+    }
   }
 }
 
@@ -45,6 +57,11 @@
     height: 62px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+
+    @media (min-width: @tablet-width) {
+      top: 28px;
+      right: 25px;
+    }
   }
 
   &--decor {
