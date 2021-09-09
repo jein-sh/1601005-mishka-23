@@ -1,7 +1,36 @@
 .main__content {
-  background-color: @light;
+  .zigzag-fill-index();
 
-  .zigzag-fill();
+  background-color: @light;
+  background-image: url("../img/mishka-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% -18px;
+  background-size: contain;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/mishka-tablet.jpg");
+    background-position: 50% 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/mishka-desktop.jpg");
+  }
+
+
+  @media (min-resolution: 2dppx) {
+    height: 373px;
+    background-image: url("../img/mishka-mobile@2x.jpg");
+
+    @media (min-width: @tablet-width) {
+      height: 748px;
+      background-image: url("../img/mishka-tablet@2x.jpg");
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 746px;
+      background-image: url("../img/mishka-desktop@2x.jpg");
+    }
+  }
 }
 
 .main__title {
@@ -10,32 +39,14 @@
   text-align: center;
   color: @black;
 
-  background-image: url("../img/mishka-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
-    background-image: url("../img/mishka-tablet.jpg");
   }
 
   @media (min-width: @desktop-width) {
     font-size: 53px;
     line-height: 57px;
-    background-image: url("../img/mishka-desktop.jpg");
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/mishka-mobile@2x.jpg");
-
-    @media (min-width: @tablet-width) {
-      background-image: url("../img/mishka-tablet@2x.jpg");
-    }
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../img/mishka-desktop@2x.jpg");
-    }
   }
 }
 
@@ -51,15 +62,15 @@
   &::after {
     position: absolute;
     content: "";
-    top: 22px;
-    right: 30px;
-    width: 62px;
+    top: 23px;
+    right: 27px;
+    width: 60px;
     height: 62px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
     @media (min-width: @tablet-width) {
-      top: 28px;
+      top: 30px;
       right: 25px;
     }
   }
@@ -81,6 +92,12 @@
 
     &::after {
       background-image: url("../img/toy.svg");
+      top: 20px;
+
+      @media (min-width: @tablet-width) {
+        top: 31px;
+        right: 33px;
+      }
     }
 
     &:active::after {

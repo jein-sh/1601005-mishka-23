@@ -1,31 +1,37 @@
 .modal-order {
-  position: absolute;
   display: none;
-  top: 1046px;
+  top: 0;
+  left: 0;
+  background-color: @modal-white-opacity;
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.modal-order__content {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 
+  width: 258px;
+  padding: 30px 30px 46px;
 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-
-  text-align: center;
   background-color: @white;
   border: 1px solid @shadow-gray;
   box-shadow: 0 5px 10px @dark-shadow;
 
   @media (min-width: @tablet-width) {
-    top: 1532px;
-    width: 360px;
-    height: 244px;
-    padding: 46px 100px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 1114px;
+    width: 364px;
+    height: 241px;
+    padding: 45px 100px 48px;
   }
 }
 
@@ -35,18 +41,23 @@
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 30px 50px 11px;
+  text-align: center;
+  padding: 0 48px;
+  margin: 0;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 57px;
     margin: 0 0 11px 0;
+    padding: 0;
   }
 }
 
 .modal-order__form {
   font-size: 15px;
   line-height: 30px;
+
   margin: 0 30px;
 
   @media (min-width: @tablet-width) {
@@ -54,6 +65,10 @@
     font-size: 17px;
     margin: 0;
   }
+}
+
+.modal-order__choice legend {
+  text-align: center;
 }
 
 .modal-order__choice {
@@ -66,25 +81,34 @@
   .reset-list();
 
   display: flex;
-  justify-content: space-between;
   margin: 21px 0 31px;
+}
+
+.choice-size__item {
+
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .choice-size__radio + label {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 82px;
-  height: 52px;
-  margin-right: 7px;
-
+  width: 78px;
+  height: 48px;
   border: 2px solid @border-gray;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    width: 112px;
+    width: 108px;
   }
+}
+
+.choice-size__radio:last-child + label {
+  margin-right: 0;
 }
 
 .choice-size__radio:hover + label {
@@ -96,11 +120,14 @@
 }
 
 .modal-order__button {
-  width: 260px;
-  height: 52px;
-  padding: 18px;
-  margin-bottom: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 18px;
   font-size: 17px;
   line-height: 16px;
 

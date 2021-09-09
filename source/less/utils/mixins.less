@@ -22,6 +22,31 @@
   margin: 0 auto;
 }
 
+.zigzag-fill-index() {
+  position: relative;
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-position: -19px 100%;
+      background-repeat: repeat-x;
+      z-index: 2;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 36px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-position: 11px 100%;
+    }
+  }
+}
+
 .zigzag-fill() {
   position: relative;
 
@@ -29,20 +54,20 @@
     @media (min-width: @tablet-width) {
       position: absolute;
       content: "";
-      bottom: -10px;
-      left: -10px;
+      bottom: 0;
+      left: 0;
       width: 100%;
       height: 24px;
       background-image: url("../img/zigzag-fill-tablet.svg");
-      background-position: 50% 100%;
+      background-position: -19px 100%;
       background-repeat: repeat-x;
       z-index: 2;
     }
 
     @media (min-width: @desktop-width) {
-      bottom: -17px;
       height: 36px;
-      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-image: url("../img/zigzag-fill-desktop2.svg");
+      background-position: 22px 100%;
     }
   }
 }
