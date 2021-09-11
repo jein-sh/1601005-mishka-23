@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="js/script.min.js" as="script">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -52,7 +54,7 @@
             <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка">
           </picture>
         </a>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--closed main-nav--nojs"> <!-- main-nav--opened -->
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__content">
         <ul class="main-nav__list site-list">
@@ -125,6 +127,9 @@
         </dl>
         <div class="product__image-wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile.webp 1x, img/triple-set-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img class="product__image" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки разного диаметра">
@@ -279,7 +284,7 @@
       </form>
     </div>
   </div>
-  <script src="../source/js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

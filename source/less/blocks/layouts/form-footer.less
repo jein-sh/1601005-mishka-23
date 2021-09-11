@@ -1,0 +1,49 @@
+.form-footer {
+  .padding-mobile();
+
+  display: flex;
+  flex-direction: column-reverse;
+
+  margin-bottom: 55px;
+
+  @media (min-width: @tablet-width) {
+    .padding-tablet();
+
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper-desktop();
+    max-width: 700px;
+    padding-bottom: 50px;
+  }
+}
+
+.form-footer__footnote {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0 0;
+  }
+}
+
+.form-footer__button {
+  padding: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 230px;
+    margin: 2px 0 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 2px 0 0;
+  }
+}
