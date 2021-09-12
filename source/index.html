@@ -5,9 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="js/script.min.js" as="script">
-  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
@@ -47,14 +49,17 @@
 
   <header class="page-header">
     <div class="page-header__content">
-        <a class="page-header__logo" href="index.html" aria-label="Обновить главную страницу">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg" >
-            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg" >
-            <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка">
-          </picture>
-        </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs"> <!-- main-nav--opened -->
+      <a class="page-header__logo" href="index.html" aria-label="Обновить главную страницу">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg" >
+          <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg" >
+          <img class="page-header__logo-img" src="img/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка">
+        </picture>
+      </a>
+      <!-- main-nav--closed для закрытого меню при вкл js,
+           main-nav--nojs для открытого меню в потоке без js,
+           main-nav--opened для открытого меню вне потока при вкл js -->
+      <nav class="main-nav main-nav--closed mai-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__content">
         <ul class="main-nav__list site-list">

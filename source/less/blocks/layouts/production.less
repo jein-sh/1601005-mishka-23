@@ -15,7 +15,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: min-content 1fr min-content;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr min-content;
     grid-template-areas: "movie title"
       "movie text"
       "movie button";
@@ -41,7 +42,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 96px 110px 0 0;
+    padding: 96px 110px 10px 0;
   }
 }
 
@@ -53,15 +54,15 @@
   grid-area: text;
 
   margin: 0;
-  padding: 35px 10px 0  34px;
+  padding: 35px 10px 40px 34px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 17px 0 40px;
+    padding: 0 17px 40px 40px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
-    padding-right: 35px;
+    padding: 20px 45px 10px 0;
+    margin-bottom: 40px;
   }
 }
 
@@ -70,16 +71,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 48px;
-  margin: 41px 34px 33px;
+  margin: 0 34px 30px 34px;
+  padding: 16px 11px;
 
   @media (min-width: @tablet-width) {
-    margin: 42px 42px 44px;
+    margin: 0 41px 44px 41px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 230px;
-    margin: 26px 0 35px 0;
+    align-self: flex-start;
+    width: 206px;
+    margin: 0 0 60px;
   }
 }
