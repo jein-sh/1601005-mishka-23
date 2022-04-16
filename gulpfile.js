@@ -53,6 +53,13 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
+const ghPages = require('gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
+
 // Images
 
 const optimizeImages = () => {
